@@ -23,64 +23,65 @@ import ServicesPage from "./pages/ServicesPage";
 
 const router = createBrowserRouter([
     {
-        path: "/",
+        path: "/dashboard",
         element: <App/>,
+        children:[
+            {
+                path:"profile",
+                element:<ProfilePage/>
+            },
+            {
+                path:"news",
+                element:<NewsPage/>
+            },
+            {
+                path:"map",
+                element:<MapPage/>
+            },
+            {
+                path:"wanted",
+                element:<WantedPage/>
+            },
+            {
+                path:"wiki",
+                element:<WikiPage/>
+            },
+            {
+                path:"messenger",
+                element:<MessengerPage/>
+            },
+            {
+                path:"friends",
+                element:<FriendsPage/>
+            },
+            {
+                path:"groups",
+                element:<GroupsPage/>
+            },
+            {
+                path:"help",
+                element:<HelpPage/>
+            },
+            {
+                path:"store",
+                element:<StorePage/>
+            },
+            {
+                path:"shelters",
+                element:<SheltersPage/>
+            },
+            {
+                path:"volunteers",
+                element:<VolunteersPage/>
+            },
+            {
+                path:"services",
+                element:<ServicesPage/>
+            }]
     },
     {
         path:"/login",
         element:<LoginPage/>
-    },
-    {
-        path:"/profile",
-        element:<ProfilePage/>
-    },
-    {
-        path:"/news",
-        element:<NewsPage/>
-    },
-    {
-        path:"/map",
-        element:<MapPage/>
-    },
-    {
-        path:"/wanted",
-        element:<WantedPage/>
-    },
-    {
-        path:"/wiki",
-        element:<WikiPage/>
-    },
-    {
-        path:"/messenger",
-        element:<MessengerPage/>
-    },
-    {
-        path:"/friends",
-        element:<FriendsPage/>
-    },
-    {
-        path:"/groups",
-        element:<GroupsPage/>
-    },
-    {
-        path:"/help",
-        element:<HelpPage/>
-    },
-    {
-        path:"/store",
-        element:<StorePage/>
-    },
-    {
-        path:"/shelters",
-        element:<SheltersPage/>
-    },
-    {
-        path:"/volunteers",
-        element:<VolunteersPage/>
-    },
-    {
-        path:"/services",
-        element:<ServicesPage/>
     }
 ]);
 
